@@ -3,15 +3,20 @@
 //Can you write a recursive function returns the addition of numbers from1 to n?
 object addition extends App{
 
-  def add(n: Int): Int ={
+  def add(n:Int): Int ={
 
-    var add1:Int = 0
-    for(a<-0 to n) {
-      add1 = add1+a
+    if(n!=0){
+      return n + add(n-1)
+
+    }else{
+      return 0
     }
-    return add1
   }
-  var sum = add(8)
-  print(sum)
+  def print(num:Int){
+    println(add(num))
+  }
+  print(8)
 }
+
+
 
